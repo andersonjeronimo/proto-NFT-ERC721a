@@ -1,0 +1,19 @@
+{
+  "name": "proto-nft-erc721a",
+  "version": "1.0.0",
+  "description": "ERC721a token implementation (from Azuki)",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat coverage"
+  },
+  "keywords": [],
+  "author": "AndersonLuiz",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.4"
+  },
+  "dependencies": {
+    "erc721a": "^4.3.0"
+  }
+}
