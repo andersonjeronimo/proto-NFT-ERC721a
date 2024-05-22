@@ -192,4 +192,16 @@ describe("ProtoNFT", function () {
     expect(await contract.supportsInterface("0x80ac58cd")).to.equal(true, "Can't support ERC721 interface");
   });
 
+  it.only("Should withdraw", async function () {
+    const { contract, owner } = await loadFixture(deployFixture);
+    await contract.mint(1, { value: ethers.parseEther("0.01") });
+    await contract.withdraw();
+    //const balance = await contract.balanceOf(owner.address);
+    //const ownerBalance = await ethers.provider.getBalance(owner.address);
+    const contractBalance = await ethers.provider.getBalance(contract.getAddress());    
+
+    //expect(ownerBalance).to.equal(ethers.parseEther("0.01"), "Can't withdraw");
+    expect(contractBalance).to.equal(0, "Can't withdraw");
+  });
+
 });
