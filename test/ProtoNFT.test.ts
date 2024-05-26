@@ -101,7 +101,7 @@ describe("ProtoNFT", function () {
     const { contract } = await loadFixture(deployFixture);
     await contract.mint(1, { value: ethers.parseEther("0.01") });
     const tokenId = 0;
-    expect(await contract.tokenURI(tokenId)).to.equal("https://www.protonft.com/0.json", "Can't get URI metadata");
+    expect(await contract.tokenURI(tokenId)).to.equal("https://yellow-wonderful-vulture-357.mypinata.cloud/ipfs/QmSYDgxC6wKJ9SqyDFZpy3mrc5ikc8P7kvTUDHHsFPaunB/0.json", "Can't get URI metadata");
   });
 
   it("Should NOT has URI metadata (token not exists)", async function () {
@@ -192,7 +192,7 @@ describe("ProtoNFT", function () {
     expect(await contract.supportsInterface("0x80ac58cd")).to.equal(true, "Can't support ERC721 interface");
   });
 
-  it.only("Should withdraw", async function () {
+  it("Should withdraw", async function () {
     const { contract, owner } = await loadFixture(deployFixture);
     await contract.mint(1, { value: ethers.parseEther("0.01") });
     await contract.withdraw();

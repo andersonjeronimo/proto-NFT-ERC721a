@@ -27,7 +27,7 @@ contract ProtoNFT is ERC721A {
     }
 
     function _baseURI() internal pure override returns (string memory) {
-        return "https://www.protonft.com/";
+        return "https://yellow-wonderful-vulture-357.mypinata.cloud/ipfs/QmSYDgxC6wKJ9SqyDFZpy3mrc5ikc8P7kvTUDHHsFPaunB/";
     }
 
     function tokenURI(
