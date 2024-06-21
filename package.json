@@ -4,7 +4,9 @@
   "description": "ERC721a token implementation (from Azuki)",
   "main": "index.js",
   "scripts": {
-    "test": "npx hardhat coverage"
+    "test": "npx hardhat coverage",
+    "deploy": "npx hardhat run scripts/deploy.ts --network avaxtest",
+    "ignition":"npx hardhat ignition deploy ignition/modules/ProtoNFT.ts --network avaxtest"
   },
   "keywords": [],
   "author": "AndersonLuiz",
@@ -14,6 +16,7 @@
     "hardhat": "^2.22.4"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "erc721a": "^4.3.0"
   }
 }
